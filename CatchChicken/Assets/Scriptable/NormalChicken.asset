@@ -15,3 +15,4 @@ MonoBehaviour:
   speed: 2
   stunTime: 3
   catchable: 1
+  chickenSprite: {fileID: 21300000, guid: acae56b0fad0b51458f49c062937f688, type: 3}

@@ -7,11 +7,12 @@ public class ChickenData : ScriptableObject
 
     [SerializeField] private float speed;
     [SerializeField] private float stunTime;
-    [SerializeField][Range(0,1)] private float catchable;
+    [SerializeField] [Range(0, 1)] private float catchable;
+    [SerializeField] private Sprite chickenSprite;
 
-    public float Speed 
+    public float Speed
     {
-        get => speed; 
+        get => speed;
         set
         {
             speed = (value >= 0)
@@ -19,9 +20,9 @@ public class ChickenData : ScriptableObject
                 : 0f;
         }
     }
-    public float StunTime 
+    public float StunTime
     {
-        get => stunTime; 
+        get => stunTime;
         set
         {
             stunTime = (value < 0)
@@ -31,9 +32,9 @@ public class ChickenData : ScriptableObject
                     : value;
         }
     }
-    public float Catchable 
+    public float Catchable
     {
-        get => catchable; 
+        get => catchable;
         set
         {
             catchable = (value < 0)
@@ -43,5 +44,6 @@ public class ChickenData : ScriptableObject
                     : value;
         }
     }
+    public Sprite ChickenSprite { get => chickenSprite; set => chickenSprite = value; }
 }
 

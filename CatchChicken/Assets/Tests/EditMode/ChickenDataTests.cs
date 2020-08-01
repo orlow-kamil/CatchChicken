@@ -81,6 +81,19 @@ namespace Tests
                 chickenData.Catchable = 1.5f;
                 Assert.AreEqual(1f, chickenData.Catchable);
             }
+
+            [Test]
+            public void Should_NotNull_When_ChickenImageSet()
+            { 
+                var sprite = Sprite.Create(
+                    Texture2D.normalTexture,
+                    Rect.zero,
+                    Vector2.zero);
+
+                chickenData.ChickenSprite = sprite;
+
+                Assert.IsNotNull(chickenData.ChickenSprite);
+            }
         }
     }
 }
